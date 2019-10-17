@@ -8,10 +8,7 @@ while num_of_list != 0:
             pupil_list.add(input())
     else:
         pupils = set()
-        #pupils.add(input() for i in range(int(input())))
-        pupils_count = int(input())
-        for i in range(pupils_count):
-            pupils.add(input())
+        [pupils.add(input()) for i in range(int(input()))]
         pupil_list = pupil_list.intersection(pupils)
     num_of_list -= 1
 print(pupil_list)
