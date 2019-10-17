@@ -4,8 +4,9 @@ pupil_list = set()
 while num_of_list != 0:
     if num_of_list == flag:
         num_of_pup = int(input())
-        for i in range(num_of_pup):
-            pupil_list.add(input())
+        # for i in range(num_of_pup):
+        #     pupil_list.add(input())
+        [pupil_list.add(input() for i in range(num_of_pup))]
     else:
         pupils = set()
         [pupils.add(input()) for i in range(int(input()))]
