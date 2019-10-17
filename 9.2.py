@@ -2,8 +2,8 @@ num_of_list = int(input())
 flag = num_of_list
 pupil_list = set()
 while num_of_list != 0:
-    num_of_pup = int(input())
     if num_of_list == flag:
+        num_of_pup = int(input())
         for i in range(num_of_pup):
             pupil_list.add(input())
     else:
