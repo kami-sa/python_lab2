@@ -1,4 +1,3 @@
-
 n = int(input())
 y = 1/n
 a = str(y)
@@ -8,12 +7,22 @@ string = ''
 symbol = ''
 num_set = set(a)
 count = len(num_set)
+count1 = 1;
 #print(num_set)
 for i in range(count):
-    if a[i] in num_set:
-        string += a[i];
-        num_set.remove(a[i])
-
+    # if a[i] in num_set:
+    #     string += a[i];
+    #     num_set.remove(a[i])
+    for j in range(len(a)):
+        for k in range(len(a)-1):
+            if a[j] == a[k]:
+                count1 += 1
+        if count1 > 1:
+            if a[i] in num_set:
+                string += a[i];
+                num_set.remove(a[i])
+if string[0] == '0' and string[0] != a[2]:
+    string = string.lstrip('0')
 print(string)
 # count = 0
 # for i in range(len(a)-1):
